@@ -1,26 +1,24 @@
 <html>
 <head>
-<title>一键启动原神</title>
-<style>
-button {
-width: 200px;
-height: 100px;
-font-size: 24px;
-background-color: #FFC0CB;
-border: none;
-border-radius: 10px;
-}
-</style>
-</head>
-<body>
-<center>
-<h1>一键启动原神</h1>
-<button onclick="launchGame()">启动原神</button>
-</center>
 <script>
 function launchGame() {
-window.location.href = "yuanshengame://";
+//尝试跳转原神APP
+var mainland = "yuanshengame://";
+window.location.href = mainland;
+//尝试跳转云原神APP
+var cloudys = "cloudys://";
+setTimeout(function() {
+window.location.href = cloudys;
+}, 1000);
+//跳转云原神网页
+var webcloud = "https://ys.mihoyo.com/cloud/";
+setTimeout(function() {
+window.location.href = webcloud;
+}, 2000);
 }
 </script>
+</head>
+<body>
+<button onclick="launchGame()">启动，原神！</button>
 </body>
 </html>
