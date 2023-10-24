@@ -1,24 +1,19 @@
 <html>
 <head>
+<title>启动，原神！</title>
 <script>
-function launchGame() {
-//尝试跳转原神APP
-var mainland = "yuanshengame://";
-window.location.href = mainland;
-//尝试跳转云原神APP
-var cloudys = "cloudys://";
-setTimeout(function() {
-window.location.href = cloudys;
-}, 1000);
-//跳转云原神网页
-var webcloud = "https://ys.mihoyo.com/cloud/";
-setTimeout(function() {
-window.location.href = webcloud;
-}, 2000);
-}
+// 尝试调用原神的url scheme
+window.onload = function() {
+var scheme = "yuanshengame://";
+var iframe = document.createElement("iframe");
+iframe.style.display = "none";
+iframe.src = scheme;
+document.body.appendChild(iframe);
+};
 </script>
 </head>
-<body>
-<button onclick="launchGame()">启动，原神！</button>
+<body style="background-color: white;">
+<!-- 跳转到云原神Web -->
+<a href="https://ys.mihoyo.com/cloud/" style="display: block; width: 100%; height: 100%;"></a>
 </body>
 </html>
