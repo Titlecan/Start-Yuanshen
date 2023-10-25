@@ -1,5 +1,5 @@
 # Start-Yuanshen
-##启动原神跳转页  
+## 启动原神跳转页  
 
 打开该页面会使用URL Scheme自动跳转原神。  
 
