@@ -4,12 +4,9 @@
 <script>
 // 尝试调用原神的url scheme
 window.onload = function() {
-var scheme = "yuanshengame://";
-var iframe = document.createElement("iframe");
-iframe.style.display = "none";
-iframe.src = scheme;
-document.body.appendChild(iframe);
-};
+function launchGame() {
+window.location.href = "yuanshengame://";
+}
 </script>
 </head>
 <body style="background-color: white;">
