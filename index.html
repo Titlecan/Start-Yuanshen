@@ -2,11 +2,18 @@
 <head>
 <title>启动，原神！</title>
 <script>
-// 尝试调用原神的url scheme
+//开始加载时
 window.onload = function() {
-function launchGame() {
+try {
+// 使用 url scheme 跳转到原神
 window.location.href = "yuanshengame://";
+} catch {
+// 错误信息
+console.error(e);
+// 跳转到云原神Web
+window.location.href = "https://ys.mihoyo.com/cloud/";
 }
+};
 </script>
 </head>
 <body style="background-color: white;">
